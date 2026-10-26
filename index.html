@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pilot · prototype</title>
+<meta name="description" content="Clickable prototype of an applicant document checklist for NYC housing lottery households.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="notes" aria-label="Prototype notes">
+    <p class="eyebrow">Prototype · Harmony PM pilot</p>
+    <h1>Pilot</h1>
+    <p>The applicant's side of document upload, for one sample household picked in a lottery. Everything here is fictional: the household, the building and the documents.</p>
+    <h2>Try these</h2>
+    <ol>
+      <li><b>No benefits path.</b> Answer "No" to the benefits question, then add one of Maria's pay stubs. You'll see the two-stub rule.</li>
+      <li><b>Employer mismatch.</b> Add Luis's Fresh Market stub. His application says Metro Deli.</li>
+      <li><b>Benefits path.</b> Restart, answer "Yes," and try each sample letter.</li>
+      <li><b>Each adult's own list.</b> Send Luis his link, then switch to his view.</li>
+    </ol>
+    <h2>What it shows</h2>
+    <ul>
+      <li>A checklist built from the application, grouped by person</li>
+      <li>Checks that warn and explain, and never block</li>
+      <li>Forms signed in the same flow</li>
+      <li>A countdown to the deadline</li>
+    </ul>
+    <p class="small">Tap "Why?" on any item to see the rule behind it. Sources: HPD/HDC Marketing Handbook (April 2025), cited by section; Attachment H-1C (April 1, 2025).</p>
+    <button type="button" class="link" id="restart">Restart the prototype</button>
+  </aside>
+  <main class="phone" aria-live="polite">
+    <div id="app"></div>
+    <div id="toast" class="toast" role="status" hidden></div>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
