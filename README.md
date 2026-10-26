@@ -33,7 +33,7 @@ Tap **Why?** on any item to see the rule behind it.
 
 Not shown: the voucher shortcut (R3, the sample household has no voucher) and building settings (R11, behind the scenes).
 
-Translations are samples written for this prototype. A launch would use professional translation. Sample file names stay in English.
+Translations are samples written for this prototype. A launch would use professional translation. The prototype doesn't remember the language you pick; a live app would save each person's choice so it's the default every time they return. Sample file names stay in English.
 
 ## Rules and sources
 

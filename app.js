@@ -195,7 +195,7 @@ const screens = {
     return `${bar()}<div class="screen">
       <h2>${t('welcomeH', { b: BUILDING })}</h2>
       <p class="lead">${t('welcomeLead', { a: AGENT, date: `<b>${DUE()}</b>` })}</p>
-      <div class="card soft"><div class="muted">${t('langNote')}${S.lang !== 'en' ? ` <i>${t('sampleTr')}</i>` : ''}</div>
+      <div class="card soft"><div class="muted">${t('langNote')} <i>${t('sampleTr')}</i></div>
       ${why(t('langWhy'), 'Handbook 4-3.C.3')}</div>
       <div class="card"><div class="toggle"><div><b>${t('remTitle')}</b><div class="muted">${t('remSub')}</div></div>
         <button type="button" class="switch" role="switch" aria-checked="${S.reminders}" aria-label="${t('remTitle')}" data-act="reminders"></button></div>
