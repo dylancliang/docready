@@ -35,7 +35,16 @@ Tap **Why?** on any item to see the rule behind it.
 | R9 Hand-off to the agent | The file the agent receives, by person and by item, with flags and the applicant's explanations. No eligibility decision. |
 | R10 Trust and other channels | A line that we never ask about immigration status and no Social Security number is needed, plus a pointer to email or in-person submission. |
 
-Not shown: the voucher shortcut (R3, the sample household has no voucher) and building settings (R11, behind the scenes).
+## Not shown, and why
+
+**The voucher path (R3)** is left out on purpose:
+
+- **It reuses a pattern the prototype already shows.** Like the benefits letter, one document replaces the household's income items (Handbook 4-5.B.4; H-1C).
+- **It's a building setting, not a new screen.** The shortcut applies only in non-tax-credit units (4-5.B.4), so it lives in building settings (R11).
+- **The prototype spends its time where households fall out at upload.** In NYHC's case study, 399 households were dropped for missing documents. Pay stubs and employer mismatches are the hardest cases to get right, so that's where the checks go.
+- **Voucher holders' bigger problem comes before upload.** NYHC found they're contacted for every income tier, even units their voucher doesn't cover. That's a matching problem in Housing Connect, not a document problem.
+
+**Building settings (R11)** run behind the scenes, so applicants don't see them.
 
 Translations are samples written for this prototype. A launch would use professional translation. The prototype doesn't remember the language you pick; a live app would save each person's choice so it's the default every time they return. Sample file names stay in English.
 
