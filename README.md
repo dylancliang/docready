@@ -4,6 +4,8 @@
 
 **Live demo:** https://dylancliang.github.io/docready/
 
+**Agent's view directly:** https://dylancliang.github.io/docready/#agent (shows a sample household that's partly done)
+
 Everything in the demo is fictional: the household, the building, the agent and the documents. Nothing is uploaded anywhere.
 
 ## Try these

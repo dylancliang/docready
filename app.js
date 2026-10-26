@@ -508,6 +508,27 @@ $app.addEventListener('change', (e) => {
   }
 });
 document.getElementById('restart').addEventListener('click', () => { S = initial(S.lang); go('welcome'); });
+// Reviewer shortcut: jump straight to the agent's view. If nothing has been done yet,
+// fill in a realistic, partly finished household so the view has something to show.
+function seedSample() {
+  Object.assign(S, {
+    benefits: false, luisJob: 'ended', luisLink: true, assetsOver: false,
+    status: { maria_stubs: 'warn', luis_ended: 'done', luis_stubs: 'done', maria_assets: 'done', maria_id: 'done' },
+    files: { maria_stubs: ['m23'], luis_stubs: ['f22', 'f15', 'f08', 'f01'], maria_id: ['idm'] },
+    notes: {
+      maria_stubs: 'Applicant sent anyway. Pilot flagged: 1 of 2 stubs.',
+      luis_ended: 'Last day Sep 25, 2026. Doesn\'t expect to return within 12 months. Signed "Luis Santos".',
+      maria_assets: 'Signed "Maria Santos". Household assets under $51,600.',
+    },
+  });
+}
+function openAgent() {
+  if (S.benefits === null) seedSample();
+  go('agent');
+}
+document.getElementById('agent-view')?.addEventListener('click', openAgent);
+if (location.hash === '#agent') openAgent();
+window.addEventListener('hashchange', () => { if (location.hash === '#agent') openAgent(); });
 document.getElementById('preview-reminders')?.addEventListener('click', () => {
   if (S.screen !== 'reminders') { S.back = S.screen; go('reminders'); }
 });
