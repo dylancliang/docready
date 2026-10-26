@@ -39,11 +39,21 @@
     <p class="small" style="margin-top:0">The voucher shortcut (PRD R3) is left out on purpose. It reuses the pattern the benefits letter already shows: one document replaces income items. It applies only in non-tax-credit units (Handbook 4-5.B.4), so it's a building setting, not a new screen. The prototype spends its time where households fall out at upload: pay stubs and mismatches, behind the 399 households dropped for missing documents in NYHC's case study. Voucher holders' bigger problem there comes before upload: they're contacted for units their voucher doesn't cover.</p>
     <p class="small">Tap "Why?" on any item to see the rule behind it. Sources: HPD/HDC Marketing Handbook (April 2025), cited by section; Attachment H-1C (April 1, 2025).</p>
     <p class="small">Translations are samples written for this prototype; a launch would use professional translation. This prototype doesn't remember the language you pick; a live app would save each person's choice so it's the default every time they return. The agent's view stays in English.</p>
-    <button type="button" class="link" id="agent-view">Jump to the agent's view</button><br>
-    <button type="button" class="link" id="preview-reminders">Preview reminder texts</button><br>
-    <button type="button" class="link" id="restart">Restart the prototype</button>
+    <button type="button" class="link js-agent" id="agent-view">Jump to the agent's view</button><br>
+    <button type="button" class="link js-reminders" id="preview-reminders">Preview reminder texts</button><br>
+    <button type="button" class="link js-restart" id="restart">Restart the prototype</button>
   </aside>
   <main class="phone" aria-live="polite">
+    <details class="mobile-about">
+      <summary>Prototype · About and how to try it</summary>
+      <p>Pilot shows the applicant's side of document upload. Each person gets a list built from their own application, with only what applies to them. Everything here is fictional.</p>
+      <ul>
+        <li>Answer "No" to benefits, then add one of Maria's pay stubs.</li>
+        <li>Add Luis's Fresh Market stub to see the employer question.</li>
+        <li>Switch languages with the 🌐 menu.</li>
+      </ul>
+      <p><button type="button" class="link js-agent">Agent's view</button> · <button type="button" class="link js-reminders">Reminder texts</button> · <button type="button" class="link js-restart">Restart</button></p>
+    </details>
     <div id="app"></div>
     <div id="toast" class="toast" role="status" hidden></div>
   </main>

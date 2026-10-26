@@ -507,7 +507,7 @@ $app.addEventListener('change', (e) => {
     $app.querySelector('select[data-change=lang]')?.focus();
   }
 });
-document.getElementById('restart').addEventListener('click', () => { S = initial(S.lang); go('welcome'); });
+document.querySelectorAll('.js-restart').forEach((el) => el.addEventListener('click', () => { S = initial(S.lang); go('welcome'); }));
 // Reviewer shortcut: jump straight to the agent's view. If nothing has been done yet,
 // fill in a realistic, partly finished household so the view has something to show.
 function seedSample() {
@@ -526,10 +526,10 @@ function openAgent() {
   if (S.benefits === null) seedSample();
   go('agent');
 }
-document.getElementById('agent-view')?.addEventListener('click', openAgent);
+document.querySelectorAll('.js-agent').forEach((el) => el.addEventListener('click', openAgent));
 if (location.hash === '#agent') openAgent();
 window.addEventListener('hashchange', () => { if (location.hash === '#agent') openAgent(); });
-document.getElementById('preview-reminders')?.addEventListener('click', () => {
+document.querySelectorAll('.js-reminders').forEach((el) => el.addEventListener('click', () => {
   if (S.screen !== 'reminders') { S.back = S.screen; go('reminders'); }
-});
+}));
 render();
