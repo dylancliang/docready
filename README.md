@@ -1,6 +1,8 @@
 # docready
 
-**Pilot** is a clickable prototype of the applicant's side of document upload for NYC affordable housing lotteries. It was built for a product case study: when a household is picked in a lottery, Pilot gives each person a short, personal checklist, checks documents the moment they're added, and hands the agent a complete file.
+**Pilot** is a clickable prototype of the applicant's side of document upload for NYC affordable housing lotteries, built for a product case study.
+
+When a household is picked in a lottery, each person gets a list built from their own application. It asks only for what applies to them and offers the shortest path the rules allow, like one benefits letter instead of everyone's pay stubs. Anything the agent asks for beyond the rules is labeled. Documents are checked the moment they're added, and the agent gets a complete file.
 
 **Live demo:** https://dylancliang.github.io/docready/
 
