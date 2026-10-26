@@ -12,6 +12,8 @@ Everything in the demo is fictional: the household, the building, the agent and 
 2. **Employer mismatch.** Add Luis's Fresh Market stub. His application says Metro Deli.
 3. **Benefits path.** Restart, answer "Yes," and try each sample letter.
 4. **Each adult's own list.** Send Luis his link, then switch to his view.
+5. **Languages.** Switch between English, Spanish, Simplified Chinese, Traditional Chinese and Russian at the top of the app.
+6. **Reminders.** Leave a few items missing, then tap "Preview the reminder texts" to see what each adult would get 2 weekdays before the deadline.
 
 Tap **Why?** on any item to see the rule behind it.
 
@@ -24,10 +26,14 @@ Tap **Why?** on any item to see the rule behind it.
 | R4 Each adult's own list | Maria sends Luis his own link. His view shows only his items. |
 | R5 Forms signed in the flow | Asset statement for every adult; a statement when a job has ended. |
 | R6 Basic checks: warn, never block | One stub when two are needed, stubs that aren't back to back, a photo it can't read, a letter that's too old or missing someone, an employer that doesn't match. "Send anyway" is always there. |
-| R7 Receipts and countdown | Deadline in every screen header, a reminders setting, and a receipt after sending. |
-| R9 Hand-off to the agent | The file the agent receives, with flags and the applicant's explanations. No eligibility decision. |
+| R7 Receipts, countdown and reminders | Deadline in every screen header, a reminders setting, a preview of the texts each adult gets 2 weekdays before the deadline (only their own missing items), and a receipt after sending. |
+| R8 Preferred language | Every applicant screen, warning and reminder in English, Spanish, Simplified Chinese, Traditional Chinese or Russian. The agent's view stays in English and shows the applicant's language. |
+| R9 Hand-off to the agent | The file the agent receives, by person and by item, with flags and the applicant's explanations. No eligibility decision. |
+| R10 Trust and other channels | A line that we never ask about immigration status and no Social Security number is needed, plus a pointer to email or in-person submission. |
 
-Not shown: the voucher shortcut (R3, the sample household has no voucher), other languages (R8, English only here), and building settings (R11, behind the scenes).
+Not shown: the voucher shortcut (R3, the sample household has no voucher) and building settings (R11, behind the scenes).
+
+Translations are samples written for this prototype. A launch would use professional translation. Sample file names stay in English.
 
 ## Rules and sources
 
@@ -52,4 +58,5 @@ No build step. Open `index.html` in a browser, or run `npx serve .` in this fold
 
 - `index.html`: page and reviewer notes
 - `style.css`: styles
-- `app.js`: screens, checklist logic and document checks
+- `app.js`: screens, checklist logic, document checks and reminders
+- `i18n.js`: applicant text in five languages

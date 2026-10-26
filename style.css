@@ -16,7 +16,7 @@
 * { box-sizing: border-box; }
 html, body { margin: 0; }
 body {
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", "PingFang SC", "PingFang TC", "Microsoft YaHei", "Microsoft JhengHei", "Noto Sans CJK SC", "Noto Sans CJK TC", sans-serif;
   background: var(--bg);
   color: var(--ink);
   font-size: 15px;
@@ -62,10 +62,14 @@ button { font: inherit; cursor: pointer; }
 }
 .brand { font-weight: 700; font-size: 15px; }
 .brand span { color: var(--accent); }
+.lang { display: flex; align-items: center; gap: 4px; font-size: 13px; color: var(--muted); }
+.lang select { font: inherit; font-size: 13px; color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: 5px 6px; background: var(--surface); }
+.duebar { padding: 8px 20px; border-bottom: 1px solid var(--line); background: #fdfaf4; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .due {
   font-size: 12.5px; font-weight: 600;
   background: var(--warn-soft); color: var(--warn);
-  padding: 5px 10px; border-radius: 999px; white-space: nowrap;
+  padding: 4px 10px; border-radius: 999px; display: inline-block;
 }
 .screen { padding: 22px 20px 28px; }
 .screen h2 { font-size: 22px; line-height: 1.25; margin: 0 0 8px; letter-spacing: -0.01em; }
